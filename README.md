@@ -4,10 +4,19 @@
 
 
 ## hi namaste:
+Here, a verilog code is written for 24 hour clock along with alarm, this code is simulated using a test bench in VIVADO software and also implemented on ZYBO 7010 .
 
 ![1](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/25a07a1d-05d1-4db1-87c1-b29f5e75a686)
 
 ## Clock Generation:
+
+Clock format = H1H0:M1M0 <br/>
+
+Clock description:
+	1) 24 hour format
+	2) Depicts hours and minutes. (seconds can also be implemented using same logic with few changes in code and using more 7 segment displays).
+ 
+![6) table](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/03a9c500-2703-4bef-867b-dcddc5513314)
 
 ### State diagram of counters:
 
