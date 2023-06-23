@@ -1,4 +1,4 @@
-# Designing-24Hr-clock.
+# Designing 24-Hr clock and alarm.
 
 ## Problem statement:
 
