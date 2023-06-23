@@ -11,8 +11,8 @@
 
 3 counters are used separately for hour, minute and second. <br/>
 Hour count = 10 * H1 + H0 <br/>
-Minute count = 10*M1 + M0 <br/>
-Second count = 10*S1 + S0 <br/>
+Minute count = 10 * M1 + M0 <br/>
+Second count = 10 * S1 + S0 <br/>
 
 ![2) counters ](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/71f58a5b-ecd1-46a0-9145-574d3913d49e)
 
