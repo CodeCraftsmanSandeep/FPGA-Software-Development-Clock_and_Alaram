@@ -23,6 +23,9 @@ Second count = 10 * S1 + S0 <br/>
 ![3) flow chart](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/fe05ff47-ec77-4abe-ba76-4b5997b79431)
 
 ## State diagram of alarm:
+Here, Alarm designed has two states: <br/>
+1) Alarm_on state
+2) Alarm_off state
 
 ![5) alarm state diagram](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/2975f78d-5c97-46b6-9754-4a845eedf59a)
 
