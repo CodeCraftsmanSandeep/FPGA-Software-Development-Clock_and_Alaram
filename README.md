@@ -20,6 +20,8 @@ Second count = 10 * S1 + S0 <br/>
 ![4) 7 segment display](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/0d7aae1d-60c3-4d63-9a28-486f59129ec1)
 
 ## Flow chart of clock:
+Initially hour count and minute count will be based on input given and second count will be zero.
+
 ![3) flow chart](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/fe05ff47-ec77-4abe-ba76-4b5997b79431)
 
 ## State diagram of alarm:
