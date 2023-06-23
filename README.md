@@ -19,8 +19,12 @@ Second count = 10 * S1 + S0 <br/>
 ## Display of H1, H0, M1, M0 using 7 segment display:
 ![4) 7 segment display](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/0d7aae1d-60c3-4d63-9a28-486f59129ec1)
 
-## Flow chart:
+## Flow chart of clock:
 ![3) flow chart](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/fe05ff47-ec77-4abe-ba76-4b5997b79431)
+
+## State diagram of alarm:
+
+![5) alarm state diagram](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/2975f78d-5c97-46b6-9754-4a845eedf59a)
 
 ## Timing diagram:
 
