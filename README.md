@@ -88,7 +88,8 @@ Whenever the loaded alarm time is reached the alarm will on, and it will off whe
 2) 4 seven segment displays(2 for hours, 2 for minutes) <br/>
 3) Connecting wires, <br/>
 4) 4 ULN 2003. <br/>
-	![UL](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/e3285c51-3962-4d2d-92eb-d7c7688d0a20)
+	![ULN](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/52c38fb7-d00c-48d8-9d59-1835aa1d40ed)
+
 5) Breadboards. <br/>
 
 
