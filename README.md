@@ -82,7 +82,7 @@ Whenever the loaded alarm time is reached the alarm will on, and it will off whe
 ## Zybo implementation:
 
 ### Materials required for Zybo-Implementation:
-1) [Zybo Board] (https://digilent.com/reference/programmable-logic/zybo/start). <br/>
+1) [Zybo Board](https://digilent.com/reference/programmable-logic/zybo/start). <br/>
 	![zybo](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/72acbdb8-a3f4-40aa-b03c-2a64c1cb76e4)
 
 2) 4 seven segment displays(2 for hours, 2 for minutes) <br/>
