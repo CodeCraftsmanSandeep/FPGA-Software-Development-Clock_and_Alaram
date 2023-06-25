@@ -92,7 +92,7 @@ Whenever the loaded alarm time is reached the alarm will on, and it will off whe
 
 ### Display of H1, H0, M1, M0 using 7 segment display:
 
-Connections in seven segment display:
+Connections in seven segment display: <br/>
 ![7-segment-display-pinout](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/70a2fcb3-5727-45e1-b2b2-35e15217a6f8)
 
 convention followed for representing digits in 7-segment display:
