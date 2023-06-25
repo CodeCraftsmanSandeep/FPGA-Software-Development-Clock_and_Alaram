@@ -68,7 +68,6 @@ Alarm will have two states they are alarm off and alarm on state with condition 
 Initially we load the time so load_time is high, and time 23:59 is loaded:
 ![9) -2)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/a3f5d4ad-2d2d-4dcc-8750-7c94b7fc3962)
 
-
 After 1 minute from 23:59, the clock goes to the state 00:00:00. This can be inferred from the following diagram. Whenever we reach 23:59:59 the clock clicks to 00:00:00, hence test case is evaluated:
 
 ![9) -1)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/2235e106-dc79-41e6-a7d9-d4ae5578bf8e)
@@ -83,11 +82,11 @@ Whenever the loaded alarm time is reached the alarm will on, and it will off whe
 ## Zybo implementation:
 
 ### Materials required for Zybo-Implementation:
-	     1) Zybo Board.
-	     2) 4 seven segment displays(2 for hours, 2 for minutes)
-	     3) Connecting wires,
-	     4) 4 ULN 2003.
-	     5) Breadboards.
+	     1) Zybo Board. <br/>
+	     2) 4 seven segment displays(2 for hours, 2 for minutes) <br/>
+	     3) Connecting wires, <br/>
+	     4) 4 ULN 2003. <br/>
+	     5) Breadboards. <br/>
 
 
 ### Display of H1, H0, M1, M0 using 7 segment display:
@@ -102,16 +101,16 @@ convention followed for representing digits in 7-segment display:
 Here in the following pictures minute seven segment diaply(M0) is shown: <br/>
 
 Initially M0 = 0: <br/>
-![min 0](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/805bcc7b-68b7-4253-b357-aca21f55dcd0)
+![min 0](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/f706a169-48bd-4b52-9148-61bdbad4d038)
 
 M0 = 1: (after one minute) <br/>
-![min 1](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/6dd26bc2-7f97-4eef-a5f6-b0f0f58b0655)
+![min 1](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/8018e1bc-6a14-4422-b599-09da2b6ae85a)
 
 M0 = 2: (after two minutes after starting) <br/>
-![min 2](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/c53407a8-ca72-4851-9949-a971b0e2e040)
+![min 2](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/212053eb-f0d4-4e31-ae00-9e4a9054bf1f)
 
 M0 = 3: (after three minutes after starting) <br/>
-![min 3](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/dd62c6fb-ab1f-4877-aebb-74d82868b4f7)
+![min 3](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/c78b5603-5e7d-47d4-bed5-78437600366c)
 
 ## Further scope:
 
