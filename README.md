@@ -1,14 +1,14 @@
 # Designing 24-Hr clock and alarm.
 
 ## Problem statement:
-Objective:   The aim of this project is to generate a 24 hour clock(depicting hours and minutes) and setting an alarm. 
-	      Features of mini project to construct design: 
-	      1) Setting clock to desired time whenever needed.
-	      2) Clicking second, minute and hours digits after completion of respective cycles.
-	      3) Setting an alarm, alarm rings whenever time is reached.
-	      4) OFF alarm whenever we want to off alarm.
+Objective:   The aim of this project is to generate a 24 hour clock(depicting hours and minutes) and setting an alarm. <br/>
+	      Features of mini project to construct design: <br/>
+	      1) Setting clock to desired time whenever needed. <br/>
+	      2) Clicking second, minute and hours digits after completion of respective cycles. <br/>
+	      3) Setting an alarm, alarm rings whenever time is reached. <br/>
+	      4) OFF alarm whenever we want to off alarm. <br/>
 
-## hi namaste:
+## Instroduction:
 Here, a verilog code is written for 24 hour clock along with alarm, this code is simulated using a test bench in VIVADO software and also implemented on ZYBO 7010 .
 
 ![1](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/25a07a1d-05d1-4db1-87c1-b29f5e75a686)
@@ -57,12 +57,14 @@ Alarm will have two states they are alarm off and alarm on state with condition 
 
 ![5) alarm state diagram](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/2975f78d-5c97-46b6-9754-4a845eedf59a)
 
-## Timing diagram:
+
+## Test bench:
+
+### Description of test bench:
+
+### Timing diagram:
 
 ## Zybo implementation:
-
-## Display of H1, H0, M1, M0 using 7 segment display:
-![4) 7 segment display](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/0d7aae1d-60c3-4d63-9a28-486f59129ec1)
 
 ### Materials required for Zybo-Implementation:
 	     1) Zybo Board.
@@ -70,6 +72,10 @@ Alarm will have two states they are alarm off and alarm on state with condition 
 	     3) Connecting wires,
 	     4) 4 ULN 2003.
 	     5) Breadboards.
+
+
+### Display of H1, H0, M1, M0 using 7 segment display:
+![4) 7 segment display](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/0d7aae1d-60c3-4d63-9a28-486f59129ec1)
 
 ## Further scope:
 
