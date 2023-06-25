@@ -99,10 +99,21 @@ convention followed for representing digits in 7-segment display:
 ![4) 7 segment display](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/0d7aae1d-60c3-4d63-9a28-486f59129ec1)
 
 ### Zybo board:
+Here in the following pictures minute seven segment diaply(M0) is shown: <br/>
 
+Initially M0 = 0: <br/>
+![min 0](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/805bcc7b-68b7-4253-b357-aca21f55dcd0)
+
+M0 = 1: (after one minute) <br/>
+![min 1](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/6dd26bc2-7f97-4eef-a5f6-b0f0f58b0655)
+
+M0 = 2: (after two minutes after starting) <br/>
+![min 2](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/c53407a8-ca72-4851-9949-a971b0e2e040)
+
+M0 = 3: (after three minutes after starting) <br/>
+![min 3](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/dd62c6fb-ab1f-4877-aebb-74d82868b4f7)
 
 ## Further scope:
-
 
 ### Reference:
 1) Padmanabhan, T. R._ Bala Tripura Sundari, B. - Design Through Verilog HDL (Padmanabhan_Design Through Verilog HDL) __ (2003, John Wiley & Sons, Inc.) 
