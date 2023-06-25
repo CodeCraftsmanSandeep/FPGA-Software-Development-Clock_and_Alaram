@@ -1,4 +1,3 @@
-![8) 4)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/b543bb5e-21da-4c48-90e9-8e2e4f2125ca)
 # Designing 24-Hr clock and alarm.
 
 ## Problem statement:
@@ -61,9 +60,25 @@ Alarm will have two states they are alarm off and alarm on state with condition 
 
 ## Test bench:
 
+
+
 ### Description of test bench:
 
 ### Timing diagram:
+Initially we load the time so load_time is high, and time 23:59 is loaded:
+![9) -2)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/a3f5d4ad-2d2d-4dcc-8750-7c94b7fc3962)
+
+
+After 1 minute from 23:59, the clock goes to the state 00:00:00. This can be inferred from the following diagram. Whenever we reach 23:59:59 the clock clicks to 00:00:00, hence test case is evaluated:
+
+![9) -1)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/2235e106-dc79-41e6-a7d9-d4ae5578bf8e)
+
+
+Input is changed to 5:30 and whenever load_alarm is high the alarm will be set:
+![9) 1)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/d50dfea7-2dbe-40de-9cbd-98d374eca740)
+
+Whenever the loaded alarm time is reached the alarm will on, and it will off whenever we off the alarm:
+![9) 2)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/d8f2fd28-8a05-4c91-b0a8-19c7d05c2d2c)
 
 ## Zybo implementation:
 
@@ -85,20 +100,6 @@ convention followed for representing digits in 7-segment display:
 
 ### Zybo board:
 
-Initially we load the time so load_time is high, and time 23:59 is loaded:
-![8) 1)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/7c8c6eaa-9100-42aa-8855-4865f606d122)
-
-After 1 minute from 23:59, the clock goes to the state 00:00:00. This can be inferred from the following diagram. Whenever we reach 23:59:59 the clock clicks to 00:00:00, hence test case is evaluated:
-
-![8) 2)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/dc8da9a0-9de2-4338-bde4-71cc04ea2cd0)
-
-
-Input is changed to 5:30 and whenever load_alarm is high the alarm will be set:
-
-![8) 3)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/80c2f33c-4922-47ed-b6e0-599a6afb9bf8)
-
-Whenever the loaded alarm time is reached the alarm will on, and it will off whenever we off the alarm:
-![8) 4)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/e658dcf4-6d32-4275-8172-95bbf4fe48f4)
 
 ## Further scope:
 
