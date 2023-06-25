@@ -82,11 +82,14 @@ Whenever the loaded alarm time is reached the alarm will on, and it will off whe
 ## Zybo implementation:
 
 ### Materials required for Zybo-Implementation:
-	     1) Zybo Board. <br/>
-	     2) 4 seven segment displays(2 for hours, 2 for minutes) <br/>
-	     3) Connecting wires, <br/>
-	     4) 4 ULN 2003. <br/>
-	     5) Breadboards. <br/>
+1) [Zybo Board] (https://digilent.com/reference/programmable-logic/zybo/start). <br/>
+	![zybo](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/72acbdb8-a3f4-40aa-b03c-2a64c1cb76e4)
+
+2) 4 seven segment displays(2 for hours, 2 for minutes) <br/>
+3) Connecting wires, <br/>
+4) 4 ULN 2003. <br/>
+	![UL](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/e3285c51-3962-4d2d-92eb-d7c7688d0a20)
+5) Breadboards. <br/>
 
 
 ### Display of H1, H0, M1, M0 using 7 segment display:
@@ -115,7 +118,12 @@ M0 = 3: (after three minutes after starting) <br/>
 M0 = 4: (after four minutes after starting) <br/>
 ![min 4](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/e3cb7ed7-c39a-4a37-b192-cabd4f464213)
 
+
+## Conclusion:
+By observing all the test cases which are evaluated in above simulations, the code with zybo implementation has successfully created a chip which can be used to generate 24 hour clock with alarm setting.
+
 ## Further scope:
+Here we can observe for the above timing diagrams, alarm ON is just one of the signal becoming high. So the coressponding wire can be connected to motor so that iw will perform desired action after certain desired time. 
 
 ### Reference:
 1) Padmanabhan, T. R._ Bala Tripura Sundari, B. - Design Through Verilog HDL (Padmanabhan_Design Through Verilog HDL) __ (2003, John Wiley & Sons, Inc.) 
