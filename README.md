@@ -112,6 +112,9 @@ M0 = 2: (after two minutes after starting) <br/>
 M0 = 3: (after three minutes after starting) <br/>
 ![min 3](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/c78b5603-5e7d-47d4-bed5-78437600366c)
 
+M0 = 4: (after four minutes after starting) <br/>
+![min 4](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/e3cb7ed7-c39a-4a37-b192-cabd4f464213)
+
 ## Further scope:
 
 ### Reference:
