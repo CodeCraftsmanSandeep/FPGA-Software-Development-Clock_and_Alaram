@@ -1,3 +1,4 @@
+![8) 4)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/b543bb5e-21da-4c48-90e9-8e2e4f2125ca)
 # Designing 24-Hr clock and alarm.
 
 ## Problem statement:
@@ -75,7 +76,29 @@ Alarm will have two states they are alarm off and alarm on state with condition 
 
 
 ### Display of H1, H0, M1, M0 using 7 segment display:
+
+Connections in seven segment display:
+![7-segment-display-pinout](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/70a2fcb3-5727-45e1-b2b2-35e15217a6f8)
+
+convention followed for representing digits in 7-segment display:
 ![4) 7 segment display](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/0d7aae1d-60c3-4d63-9a28-486f59129ec1)
+
+### Zybo board:
+
+Initially we load the time so load_time is high, and time 23:59 is loaded:
+![8) 1)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/7c8c6eaa-9100-42aa-8855-4865f606d122)
+
+After 1 minute from 23:59, the clock goes to the state 00:00:00. This can be inferred from the following diagram. Whenever we reach 23:59:59 the clock clicks to 00:00:00, hence test case is evaluated:
+
+![8) 2)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/dc8da9a0-9de2-4338-bde4-71cc04ea2cd0)
+
+
+Input is changed to 5:30 and whenever load_alarm is high the alarm will be set:
+
+![8) 3)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/80c2f33c-4922-47ed-b6e0-599a6afb9bf8)
+
+Whenever the loaded alarm time is reached the alarm will on, and it will off whenever we off the alarm:
+![8) 4)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/e658dcf4-6d32-4275-8172-95bbf4fe48f4)
 
 ## Further scope:
 
