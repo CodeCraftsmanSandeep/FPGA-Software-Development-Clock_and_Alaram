@@ -130,4 +130,4 @@ Here we can observe for the above timing diagrams, alarm ON is just one of the s
 1) Padmanabhan, T. R._ Bala Tripura Sundari, B. - Design Through Verilog HDL (Padmanabhan_Design Through Verilog HDL) __ (2003, John Wiley & Sons, Inc.) 
 2) Digital Design With an Introduction to the Verilog HDL, VHDL, and SystemVerilog(chapter 6).
 3) Digital Electronics Principles, Devices and Applications. By Wiley.
-4) Online reference: [Link](https://en.wikipedia.org/wiki/Clock_generator), and other online references.
+4) [Wiki](https://en.wikipedia.org/wiki/Clock_generator)
