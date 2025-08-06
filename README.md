@@ -2,10 +2,22 @@
 Answer:
 
 ![min 4](assets/FPGA/Minute_4.jpg)
-# Designing 24-Hr clock and alarm.
+
+---
+
+# Goal: Design Embedded Software on FPGA for Clock + Alaram
+
+Welcome to this repository!, here you will get to see the following:
+- [x] System Design of Clock + Alaram on real hardware.
+- [x] Verilog implementation on FPGA, for generating required signals.
+- [x] Testing developed codebase.
+- [x] Integrate the system with Integrated Circuits (IC's) to acheive the goal.
+- [x] Use **Electronic Display Module (EDM)** for display.
+
+> I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significanlt different from CPU's, GPU's. FPGA's can be used in AI (lot of research papers), control systems etc.. 
 
 ## Problem statement:
-Objective:   The aim of this project is to generate a 24 hour clock(depicting hours and minutes) and setting an alarm. <br/>
+The aim of this project is to generate a 24 hour clock(depicting hours and minutes) and setting an alarm. <br/>
 	      Features of mini project to construct design: <br/>
 	      1) Setting clock to desired time whenever needed. <br/>
 	      2) Clicking second, minute and hours digits after completion of respective cycles. <br/>
