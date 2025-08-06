@@ -1,5 +1,5 @@
 $${\color{blue}Q)How \space my \space Embedded \space Software \space works?}$$
-$${Here is how:}$$
+$${Here \space is \space how:}$$
 
 ![min 4](assets/FPGA/Minute_4.jpg)
 
