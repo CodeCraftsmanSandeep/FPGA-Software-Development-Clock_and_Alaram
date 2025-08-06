@@ -1,4 +1,5 @@
 <h3 align="centre">How my <strong>Embedded Software</strong> works? </h3>
+Answer:
 
 ![min 4](assets/FPGA/Minute_4.jpg)
 # Designing 24-Hr clock and alarm.
