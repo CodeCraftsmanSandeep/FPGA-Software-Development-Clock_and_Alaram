@@ -1,3 +1,4 @@
+![min 4](assets/FPGA/Minute_4.jpg)
 # Designing 24-Hr clock and alarm.
 
 ## Problem statement:
@@ -8,10 +9,10 @@ Objective:   The aim of this project is to generate a 24 hour clock(depicting ho
 	      3) Setting an alarm, alarm rings whenever time is reached. <br/>
 	      4) OFF alarm whenever we want to off alarm. <br/>
 
-## Instroduction:
+## Introduction:
 Here, a verilog code is written for 24 hour clock along with alarm, this code is simulated using a test bench in VIVADO software and also implemented on ZYBO 7010 .
 
-![1](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/25a07a1d-05d1-4db1-87c1-b29f5e75a686)
+![clock_to_design](assets/clock_to_design.png)
 
 ## Clock Generation:
 
@@ -21,7 +22,7 @@ Clock description:
 	1) 24 hour format
 	2) Depicts hours and minutes. (seconds can also be implemented using same logic with few changes in code and using more 7 segment displays).
  
-![6) table](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/03a9c500-2703-4bef-867b-dcddc5513314)
+![table](assets/table.png)
 
 
 ### Desription of approach:
@@ -34,13 +35,13 @@ Second count = 10 * S1 + S0 <br/>
 1st up counter is for clicking seconds from 00 to 59, 2nd up counter form 00 to 59, 3rd up  counter from 00 to 23.
 Whenever one complete cycle is completed in one counter, 1 will be incremented in subsequent counter as depicted in below state diagram.
 
-![2) counters ](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/71f58a5b-ecd1-46a0-9145-574d3913d49e)
+![flow chart](assets/flow_chart.png)
 Minute and seconds counter has 60 states, and hours counter has 24 states.
 
 ### Flow chart of clock:
 Initially hour count and minute count will be based on input given and second count will be zero.
 
-![3) flow chart](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/fe05ff47-ec77-4abe-ba76-4b5997b79431)
+![system design](assets/system_design.png)
 
 ## Alarm:
 Alarm which is designed works as follows: <br/>
@@ -55,7 +56,7 @@ Alarm will have two states they are alarm off and alarm on state with condition 
 1) Alarm_on state
 2) Alarm_off state
 
-![5) alarm state diagram](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/2975f78d-5c97-46b6-9754-4a845eedf59a)
+![state diagram](assets/state_diagram.png)
 
 
 ## Test bench:
@@ -66,58 +67,55 @@ Alarm will have two states they are alarm off and alarm on state with condition 
 
 ### Timing diagram:
 Initially we load the time so load_time is high, and time 23:59 is loaded:
-![9) -2)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/a3f5d4ad-2d2d-4dcc-8750-7c94b7fc3962)
+![timing diagram](assets/timing_diagrams/timing_diagram_1.png)
 
 After 1 minute from 23:59, the clock goes to the state 00:00:00. This can be inferred from the following diagram. Whenever we reach 23:59:59 the clock clicks to 00:00:00, hence test case is evaluated:
 
-![9) -1)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/2235e106-dc79-41e6-a7d9-d4ae5578bf8e)
+![timing diagram](assets/timing_diagrams/timing_diagram_2.png)
 
 
 Input is changed to 5:30 and whenever load_alarm is high the alarm will be set:
-![9) 1)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/d50dfea7-2dbe-40de-9cbd-98d374eca740)
+![timing diagram](assets/timing_diagrams/timing_diagram_3.png)
 
 Whenever the loaded alarm time is reached the alarm will on, and it will off whenever we off the alarm:
-![9) 2)](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/d8f2fd28-8a05-4c91-b0a8-19c7d05c2d2c)
+![timing diagram](assets/timing_diagrams/timing_diagram_4.png)
 
 ## Zybo implementation:
 
 ### Materials required for Zybo-Implementation:
 1) [Zybo Board](https://digilent.com/reference/programmable-logic/zybo/start). <br/>
-	![zybo](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/72acbdb8-a3f4-40aa-b03c-2a64c1cb76e4)
+	![zybo](assets/FPGA/FPGA.jpg)
 
 2) 4 seven segment displays(2 for hours, 2 for minutes) <br/>
 3) Connecting wires, <br/>
 4) 4 ULN 2003. <br/>
-	![ULN](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/52c38fb7-d00c-48d8-9d59-1835aa1d40ed)
-
+	![ULN](assets/reference_images/ULN.png)
 5) Breadboards. <br/>
-
 
 ### Display of H1, H0, M1, M0 using 7 segment display:
 
 Connections in seven segment display: <br/>
-![7-segment-display-pinout](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/70a2fcb3-5727-45e1-b2b2-35e15217a6f8)
+![7-segment-display-pinout](assets/reference_images/seven_segment_display.jpg)
 
 convention followed for representing digits in 7-segment display:
-![4) 7 segment display](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/0d7aae1d-60c3-4d63-9a28-486f59129ec1)
+![4) 7 segment display](assets/reference_images/details_seven_segment_display.png)
 
 ### Zybo board:
 Here in the following pictures minute seven segment diaply(M0) is shown: <br/>
 
 Initially M0 = 0: <br/>
-![min 0](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/f706a169-48bd-4b52-9148-61bdbad4d038)
+![min 0](assets/FPGA/Minute_0.jpg)
 
 M0 = 1: (after one minute) <br/>
-![min 1](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/8018e1bc-6a14-4422-b599-09da2b6ae85a)
+![min 1](assets/FPGA/Minute_1.jpg)
 
 M0 = 2: (after two minutes after starting) <br/>
-![min 2](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/212053eb-f0d4-4e31-ae00-9e4a9054bf1f)
+![min 2](assets/FPGA/Minute_2.jpg)
 
 M0 = 3: (after three minutes after starting) <br/>
-![min 3](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/c78b5603-5e7d-47d4-bed5-78437600366c)
+![min 3](assets/FPGA/Minute_3.jpg)
 
-M0 = 4: (after four minutes after starting) <br/>
-![min 4](https://github.com/112101011/Designing-24Hr-clock./assets/111628378/e3cb7ed7-c39a-4a37-b192-cabd4f464213)
+M0 = 4: (after four minutes after starting) <br/> ![min 4](assets/FPGA/Minute_4.jpg)
 
 
 ## Conclusion:
