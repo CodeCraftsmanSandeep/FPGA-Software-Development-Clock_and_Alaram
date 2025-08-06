@@ -39,8 +39,6 @@ The objective of this project is to implement a **24-hour digital clock** (displ
 3. Option to set an alarm, which rings when the specified time is reached.
 4. Ability to manually turn off the alarm when needed.
 
-Here’s a polished and professional version of your README that’s clean, organized, and easier to read, while still conveying all the technical details and visuals effectively:
-
 ## 📷 Design Overview
 
 ### Clock Design
@@ -54,11 +52,10 @@ Here’s a polished and professional version of your README that’s clean, orga
   * Hours: `00 → 23`
 * **Behavior**: On full cycle of a lower-order counter, the next higher-order counter increments.
 
-| Counter | Max Value | Description     |
-| ------- | --------- | --------------- |
-| S0, S1  | 59        | Seconds         |
-| M0, M1  | 59        | Minutes         |
-| H0, H1  | 23        | Hours (24-hour) |
+<div align="center">
+  <img src="assets/table.png" width="450"/>
+  <br/><em>Methods Used</em>
+</div>
 
 ## 🧠 Approach
 
