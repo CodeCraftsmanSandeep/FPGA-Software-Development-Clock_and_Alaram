@@ -17,7 +17,7 @@ Welcome to this repository!, here you will get to see the following: <br>
 > I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significantly different from CPU's and GPU's. FPGA's can be used for AI (lot of research papers), control systems and many other places.
 
 <div align="center">
-  <img src="assets/clock_to_design.png" width="450"/>
+  <img src="assets/clock_to_design.png" width="600"/>
   <br/><em>Clock Diagram</em>
 </div>
 
@@ -53,7 +53,7 @@ The objective of this project is to implement a **24-hour digital clock** (displ
 * **Behavior**: On full cycle of a lower-order counter, the next higher-order counter increments.
 
 <div align="center">
-  <img src="assets/table.png" width="450"/>
+  <img src="assets/table.png" width="600"/>
   <br/><em>Methods Used</em>
 </div>
 
