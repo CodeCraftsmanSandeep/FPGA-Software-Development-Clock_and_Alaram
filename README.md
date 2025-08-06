@@ -68,7 +68,7 @@ The objective of this project is to implement a **24-hour digital clock** (displ
 * Clock rolls over to `00:00:00` after `23:59:59`.
 
 <div align="center">
-  <img src="assets/flow_chart.png" width="400"/><br/>
+  <img src="assets/flow_chart.png" width="600"/><br/>
   <em>State Transition Diagram</em>
 </div>
 
@@ -87,7 +87,7 @@ The objective of this project is to implement a **24-hour digital clock** (displ
   2. `ALARM_OFF`
 
 <div align="center">
-  <img src="assets/state_diagram.png" width="400"/>
+  <img src="assets/state_diagram.png" width="600"/>
   <br/><em>Alarm State Diagram</em>
 </div>
 
