@@ -1,5 +1,6 @@
 $${\color{blue}Q)How \space Embedded \space Software \space works?}$$
 $${Answer:}$$
+
 ![min 4](assets/FPGA/Minute_4.jpg)
 
 ---
