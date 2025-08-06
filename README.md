@@ -1,5 +1,5 @@
-<h3 align="centre">How my <strong>Embedded Software</strong> works? </h3>
-Answer:
+<p style="text-align: center; color: blue; ">Q) How my <strong>Embedded Software</strong> works? </p>
+<p align="center"> Answer: <p>
 
 ![min 4](assets/FPGA/Minute_4.jpg)
 
@@ -8,13 +8,13 @@ Answer:
 # Goal: Design Embedded Software on FPGA for Clock + Alaram
 
 Welcome to this repository!, here you will get to see the following:
-- [x] System Design of Clock + Alaram on real hardware.
-- [x] Verilog implementation on FPGA, for generating required signals.
+- [x] **System Design** of Clock + Alaram on real hardware.
+- [x] **Verilog implementation** on FPGA, for generating required signals.
 - [x] Testing developed codebase.
-- [x] Integrate the system with Integrated Circuits (IC's) to acheive the goal.
+- [x] Integrate the system with **Integrated Circuits (IC's)** to acheive the goal.
 - [x] Use **Electronic Display Module (EDM)** for display.
 
-> I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significanlt different from CPU's, GPU's. FPGA's can be used in AI (lot of research papers), control systems etc.. 
+> I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significanlt different from CPU's, GPU's. FPGA's can be used for AI (lot of research papers), control systems and what not!  
 
 ## Problem statement:
 The aim of this project is to generate a 24 hour clock(depicting hours and minutes) and setting an alarm. <br/>
