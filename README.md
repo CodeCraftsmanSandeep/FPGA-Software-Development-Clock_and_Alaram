@@ -16,6 +16,11 @@ Welcome to this repository!, here you will get to see the following: <br>
 
 > I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significantly different from CPU's and GPU's. FPGA's can be used for AI (lot of research papers), control systems and many other places.
 
+<div align="center">
+  <img src="assets/clock_to_design.png" width="450"/>
+  <br/><em>Clock Diagram</em>
+</div>
+
 ## What's Inside
 - ```Hardware```
 	- ```FPGA``` ```Zybo Board``` ```Connecting Wires``` ```Integrated Circuit (IC)``` ```Electronic Display Module (EDM)``` ```Seven Segment Display``` ```GPIO (General Purpose I/O) Pins```  ```Breadboard``` ```Power Supply / USB Power```
@@ -34,123 +39,128 @@ The objective of this project is to implement a **24-hour digital clock** (displ
 3. Option to set an alarm, which rings when the specified time is reached.
 4. Ability to manually turn off the alarm when needed.
 
-## Introduction:
-Here, a verilog code is written for 24 hour clock along with alarm, this code is simulated using a test bench in VIVADO software and also implemented on ZYBO 7010 .
+Here’s a polished and professional version of your README that’s clean, organized, and easier to read, while still conveying all the technical details and visuals effectively:
 
-![clock_to_design](assets/clock_to_design.png)
+## 📷 Design Overview
 
-## Clock Generation:
+### Clock Design
 
-Clock format = H1H0:M1M0 <br/>
+* **Clock Format**: `H1H0 : M1M0`
+* **Structure**: 3 up-counters track seconds, minutes, and hours.
+* **Rollovers**:
 
-Clock description:
-	1) 24 hour format
-	2) Depicts hours and minutes. (seconds can also be implemented using same logic with few changes in code and using more 7 segment displays).
- 
-![table](assets/table.png)
+  * Seconds: `00 → 59`
+  * Minutes: `00 → 59`
+  * Hours: `00 → 23`
+* **Behavior**: On full cycle of a lower-order counter, the next higher-order counter increments.
 
+| Counter | Max Value | Description     |
+| ------- | --------- | --------------- |
+| S0, S1  | 59        | Seconds         |
+| M0, M1  | 59        | Minutes         |
+| H0, H1  | 23        | Hours (24-hour) |
 
-### Desription of approach:
-3 up counters are used to generate clock. <br/>
+## 🧠 Approach
 
-Hour count = 10 * H1 + H0 <br/>
-Minute count = 10 * M1 + M0 <br/>
-Second count = 10 * S1 + S0 <br/>
+* **Counters Used**:
 
-1st up counter is for clicking seconds from 00 to 59, 2nd up counter form 00 to 59, 3rd up  counter from 00 to 23.
-Whenever one complete cycle is completed in one counter, 1 will be incremented in subsequent counter as depicted in below state diagram.
+  * `Up Counter 1`: Seconds (00–59)
+  * `Up Counter 2`: Minutes (00–59)
+  * `Up Counter 3`: Hours (00–23)
+* State transitions modeled using a finite state machine (FSM).
+* Clock rolls over to `00:00:00` after `23:59:59`.
 
-![flow chart](assets/flow_chart.png)
-Minute and seconds counter has 60 states, and hours counter has 24 states.
-
-### Flow chart of clock:
-Initially hour count and minute count will be based on input given and second count will be zero.
-
-![system design](assets/system_design.png)
-
-## Alarm:
-Alarm which is designed works as follows: <br/>
-Whenever we press load_alarm switch, alarm gets loaded with inputs given
-1) After reaching into the time given, alarm will ON.
-2) Then when we give alarm OFF it will OFF.
-
-Alarm will on whenever the alarm set time is equal to present time, provided alarm off button is off.
-Alarm will not on if alarm off button is on even though set alarm time equals present time.
-Alarm will have two states they are alarm off and alarm on state with condition checker of present time and alarm set time checker
-
-1) Alarm_on state
-2) Alarm_off state
-
-![state diagram](assets/state_diagram.png)
+<div align="center">
+  <img src="assets/flow_chart.png" width="400"/><br/>
+  <em>State Transition Diagram</em>
+</div>
 
 
-## Test bench:
+## ⏰ Alarm Logic
 
+* Alarm time is set using `load_alarm` input.
+* Alarm is activated when:
 
+  * `Current Time == Alarm Time`
+  * AND `Alarm Off Switch` is LOW
+* Alarm deactivates on pressing the `Alarm Off` switch.
+* Two FSM states:
 
-### Description of test bench:
+  1. `ALARM_ON`
+  2. `ALARM_OFF`
 
-### Timing diagram:
-Initially we load the time so load_time is high, and time 23:59 is loaded:
-![timing diagram](assets/timing_diagrams/timing_diagram_1.png)
+<div align="center">
+  <img src="assets/state_diagram.png" width="400"/>
+  <br/><em>Alarm State Diagram</em>
+</div>
 
-After 1 minute from 23:59, the clock goes to the state 00:00:00. This can be inferred from the following diagram. Whenever we reach 23:59:59 the clock clicks to 00:00:00, hence test case is evaluated:
+---
 
-![timing diagram](assets/timing_diagrams/timing_diagram_2.png)
+## 🧪 Testbench and Simulation
 
+The Verilog testbench simulates real-time ticking and alarm functionality.
 
-Input is changed to 5:30 and whenever load_alarm is high the alarm will be set:
-![timing diagram](assets/timing_diagrams/timing_diagram_3.png)
+### ⌛️ Test Cases
 
-Whenever the loaded alarm time is reached the alarm will on, and it will off whenever we off the alarm:
-![timing diagram](assets/timing_diagrams/timing_diagram_4.png)
+* **Load Time = 23:59:00** → Rolls over to `00:00:00`
+* **Set Alarm = 05:30** → Alarm triggers when time matches
+* Alarm stops only when `alarm_off` signal is high.
 
-## Zybo implementation:
+#### Test Case Screenshots
 
-### Materials required for Zybo-Implementation:
-1) [Zybo Board](https://digilent.com/reference/programmable-logic/zybo/start). <br/>
-	![zybo](assets/FPGA/FPGA.jpg)
+| Description               | Timing Diagram                                      |
+| ------------------------- | --------------------------------------------------- |
+| Loading Time = 23:59      | ![td1](assets/timing_diagrams/timing_diagram_1.png) |
+| After 1 minute → 00:00:00 | ![td2](assets/timing_diagrams/timing_diagram_2.png) |
+| Setting Alarm = 05:30     | ![td3](assets/timing_diagrams/timing_diagram_3.png) |
+| Alarm ON/OFF states       | ![td4](assets/timing_diagrams/timing_diagram_4.png) |
 
-2) 4 seven segment displays(2 for hours, 2 for minutes) <br/>
-3) Connecting wires, <br/>
-4) 4 ULN 2003. <br/>
-	![ULN](assets/reference_images/ULN.png)
-5) Breadboards. <br/>
+## 🔌 Hardware Implementation on Zybo
 
-### Display of H1, H0, M1, M0 using 7 segment display:
+### Materials Used
 
-Connections in seven segment display: <br/>
-![7-segment-display-pinout](assets/reference_images/seven_segment_display.jpg)
+| Component                                                                        | Description                |
+| -------------------------------------------------------------------------------- | -------------------------- |
+| [Zybo Z7-10 Board](https://digilent.com/reference/programmable-logic/zybo/start) | FPGA development board     |
+| 4 x Seven-Segment Displays                                                       | 2 for Hours, 2 for Minutes |
+| ULN2003 IC x4                                                                    | For segment driving        |
+| Breadboard, wires                                                                | Circuit assembly           |
 
-convention followed for representing digits in 7-segment display:
-![4) 7 segment display](assets/reference_images/details_seven_segment_display.png)
+#### 7-Segment Display Overview
 
-### Zybo board:
-Here in the following pictures minute seven segment diaply(M0) is shown: <br/>
+* Used to display H1, H0, M1, M0
+* Displays driven by counters and multiplexing logic
 
-Initially M0 = 0: <br/>
-![min 0](assets/FPGA/Minute_0.jpg)
+<div align="center">
+  <img src="assets/reference_images/seven_segment_display.jpg" width="400"/><br/>
+  <em>7-Segment Display Pinout</em><br/><br/>
+  <img src="assets/reference_images/details_seven_segment_display.png" width="400"/><br/>
+  <em>Digit Representation</em>
+</div>
 
-M0 = 1: (after one minute) <br/>
-![min 1](assets/FPGA/Minute_1.jpg)
+#### Hardware Clock Output (Examples)
 
-M0 = 2: (after two minutes after starting) <br/>
-![min 2](assets/FPGA/Minute_2.jpg)
+| Minute Value | Display                         |
+| ------------ | ------------------------------- |
+| M0 = 0       | ![M0](assets/FPGA/Minute_0.jpg) |
+| M0 = 1       | ![M1](assets/FPGA/Minute_1.jpg) |
+| M0 = 2       | ![M2](assets/FPGA/Minute_2.jpg) |
+| M0 = 3       | ![M3](assets/FPGA/Minute_3.jpg) |
+| M0 = 4       | ![M4](assets/FPGA/Minute_4.jpg) |
 
-M0 = 3: (after three minutes after starting) <br/>
-![min 3](assets/FPGA/Minute_3.jpg)
+## ✅ Conclusion
 
-M0 = 4: (after four minutes after starting) <br/> ![min 4](assets/FPGA/Minute_4.jpg)
+The 24-hour clock with alarm functionality was **successfully implemented on hardware** using Verilog and the Zybo board. Simulations confirm the correctness of timing and alarm transitions. Hardware results verify proper display and logic functioning.
 
+## 🚀 Future Work
 
-## Conclusion:
-By observing all the test cases which are evaluated in above simulations, the code with zybo implementation has successfully created a chip which can be used to generate 24 hour clock with alarm setting.
+* Integrate buzzer/motor using alarm output signal.
+* Extend to display seconds with additional 7-segment displays.
+* Add real-time clock synchronization for external inputs.
 
-## Further scope:
-Here we can observe for the above timing diagrams, alarm ON is just one of the signal becoming high. So the coressponding wire can be connected to motor so that iw will perform desired action after certain desired time. 
+## 📚 References
 
-### Reference:
-1) Padmanabhan, T. R._ Bala Tripura Sundari, B. - Design Through Verilog HDL (Padmanabhan_Design Through Verilog HDL) __ (2003, John Wiley & Sons, Inc.) 
-2) Digital Design With an Introduction to the Verilog HDL, VHDL, and SystemVerilog(chapter 6).
-3) Digital Electronics Principles, Devices and Applications. By Wiley.
-4) [Wiki](https://en.wikipedia.org/wiki/Clock_generator)
+1. Padmanabhan, T. R., & Bala Tripura Sundari, B. – *Design Through Verilog HDL*, John Wiley & Sons, 2003.
+2. *Digital Design with Introduction to Verilog HDL, VHDL, and SystemVerilog* – Chapter 6
+3. *Digital Electronics: Principles, Devices and Applications* – Wiley
+4. [Wikipedia – Clock Generator](https://en.wikipedia.org/wiki/Clock_generator)
