@@ -5,14 +5,14 @@ $${Here \space is \space how:}$$
 
 ---
 
-# Goal: Design Embedded Software on FPGA for Clock + Alaram
+# Goal🎯: Design Embedded Software on FPGA for Clock + Alaram
 
-Welcome to this repository!, here you will get to see the following:
-- [x] **System Design** of Clock + Alaram on real hardware.
-- [x] **Verilog implementation** on FPGA, for generating required signals.
-- [x] Testing developed codebase.
-- [x] Integrate the system with **Integrated Circuits (IC's)** to acheive the goal.
-- [x] Use **Electronic Display Module (EDM)** for display.
+Welcome to this repository!, here you will get to see the following: <br>
+✅ **System Design** of Clock + Alaram on real hardware.<br>
+✅ **Verilog implementation** on FPGA, for generating required signals. <br>
+✅ Testing developed codebase. <br>
+✅ Integrate the system with **Integrated Circuits (IC's)** to acheive the goal. <br>
+✅ Use **Electronic Display Module (EDM)** for display.
 
 > I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significantly different from CPU's, GPU's. FPGA's can be used for AI (lot of research papers), control systems and many other places.
 
