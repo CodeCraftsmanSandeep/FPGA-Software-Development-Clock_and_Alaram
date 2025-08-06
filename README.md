@@ -16,13 +16,23 @@ Welcome to this repository!, here you will get to see the following: <br>
 
 > I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significantly different from CPU's and GPU's. FPGA's can be used for AI (lot of research papers), control systems and many other places.
 
-## Problem statement:
-The aim of this project is to generate a 24 hour clock(depicting hours and minutes) and setting an alarm. <br/>
-	      Features of mini project to construct design: <br/>
-	      1) Setting clock to desired time whenever needed. <br/>
-	      2) Clicking second, minute and hours digits after completion of respective cycles. <br/>
-	      3) Setting an alarm, alarm rings whenever time is reached. <br/>
-	      4) OFF alarm whenever we want to off alarm. <br/>
+## What's Inside
+- ```Hardware```
+	- ```FPGA``` ```Zybo Board``` ```Connecting Wires``` ```Integrated Circuit (IC)``` ```Electronic Display Module (EDM)``` ```Seven Segment Display``` ```GPIO (General Purpose I/O) Pins```  ```Breadboard``` ```Power Supply / USB Power```
+- ```Embedded Software Development``` / ```System Design```
+	- ```Verilog```  ```Test Bench``` ```Vivado (Xilinx)``` ```Finite State Machine (FSM)```
+
+
+## Problem Statement
+
+The objective of this project is to implement a **24-hour digital clock** (displaying hours and minutes) with an integrated **alarm feature**.
+
+### Key Features:
+
+1. Ability to set the clock to any desired time.
+2. Automatic increment of seconds, minutes, and hours upon completion of their respective cycles.
+3. Option to set an alarm, which rings when the specified time is reached.
+4. Ability to manually turn off the alarm when needed.
 
 ## Introduction:
 Here, a verilog code is written for 24 hour clock along with alarm, this code is simulated using a test bench in VIVADO software and also implemented on ZYBO 7010 .
