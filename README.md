@@ -1,4 +1,4 @@
-$${\color{blue}Q)How \space Embedded \space Software \space works?}$$
+$${\color{blue}Q)How \space my \space \textbf{Embedded \space Software} \space works?}$$
 $${Answer:}$$
 
 ![min 4](assets/FPGA/Minute_4.jpg)
