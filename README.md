@@ -1,6 +1,5 @@
-<p style="text-align: center; color: blue; ">Q) How my <strong>Embedded Software</strong> works? </p>
-<p align="center"> Answer: <p>
-
+$${\color{blue}Q)How \space Embedded \space Software \space works?}$$
+$${Answer:}$$
 ![min 4](assets/FPGA/Minute_4.jpg)
 
 ---
