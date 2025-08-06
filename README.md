@@ -21,14 +21,14 @@ Welcome to this repository!, here you will get to see the following: <br>
   <br/><em>Clock Diagram</em>
 </div>
 
-## What's Inside
+## 📦 What's Inside
 - ```Hardware```
 	- ```FPGA``` ```Zybo Board``` ```Connecting Wires``` ```Integrated Circuit (IC)``` ```Electronic Display Module (EDM)``` ```Seven Segment Display``` ```GPIO (General Purpose I/O) Pins```  ```Breadboard``` ```Power Supply / USB Power```
 - ```Embedded Software Development``` / ```System Design```
 	- ```Verilog```  ```Test Bench``` ```Vivado (Xilinx)``` ```Finite State Machine (FSM)```
 
 
-## Problem Statement
+## 🧩 Problem Statement
 
 The objective of this project is to implement a **24-hour digital clock** (displaying hours and minutes) with an integrated **alarm feature**.
 
@@ -155,7 +155,7 @@ The 24-hour clock with alarm functionality was **successfully implemented on har
 * Extend to display seconds with additional 7-segment displays.
 * Add real-time clock synchronization for external inputs.
 
-## 📚 References
+## 📚 Citations
 
 1. Padmanabhan, T. R., & Bala Tripura Sundari, B. – *Design Through Verilog HDL*, John Wiley & Sons, 2003.
 2. *Digital Design with Introduction to Verilog HDL, VHDL, and SystemVerilog* – Chapter 6
