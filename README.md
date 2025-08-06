@@ -14,7 +14,7 @@ Welcome to this repository!, here you will get to see the following: <br>
 ✅ Integrate the system with **Integrated Circuits (IC's)** to acheive the goal. <br>
 ✅ Use **Electronic Display Module (EDM)** for display.
 
-> I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significantly different from CPU's, GPU's. FPGA's can be used for AI (lot of research papers), control systems and many other places.
+> I love ❤️ to play with hardware, make designs, and most importantly use the hardware to the fullest. This is one of the projects where I used the hardware (FPGA + IC + EDM) for cooking logic, this playground is significantly different from CPU's and GPU's. FPGA's can be used for AI (lot of research papers), control systems and many other places.
 
 ## Problem statement:
 The aim of this project is to generate a 24 hour clock(depicting hours and minutes) and setting an alarm. <br/>
